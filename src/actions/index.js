@@ -1,7 +1,7 @@
 import reddit from "../api/reddit";
 
-export const fetchPosts = () => async (dispatch) => {
-  const resp = await reddit.get("/r/all/top.json?limit=10");
+export const fetchPosts = (after) => async (dispatch) => {
+  const resp = await reddit.get(`/r/all/top.json?after=${after}&limit=10`);
 
   const posts = {
     after: resp.data.data.after,

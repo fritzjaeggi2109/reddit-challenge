@@ -1,6 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  HashRouter,
+} from "react-router-dom";
 import { fetchPosts } from "../actions";
 
 import classes from "../css/app.module.css";
@@ -28,7 +33,7 @@ class App extends React.Component {
   render() {
     return (
       <div className={classes.mainContainer}>
-        <Router>
+        <HashRouter basename="/">
           <Header
             path={this.state.path}
             label={this.state.label}
@@ -45,7 +50,7 @@ class App extends React.Component {
               <Gallery />
             </Route>
           </Switch>
-        </Router>
+        </HashRouter>
       </div>
     );
   }

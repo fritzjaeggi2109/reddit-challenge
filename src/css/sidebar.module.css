@@ -1,6 +1,5 @@
 .sidebar {
   width: 35%;
-  height: 90vh;
+  height: 100vh;
   overflow: auto;
-  padding-bottom: 1.5vh;
 }
