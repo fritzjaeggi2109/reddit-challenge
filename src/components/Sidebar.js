@@ -18,7 +18,6 @@ const Sidebar = (props) => {
 
   return (
     <div className={classes.sidebar}>
-      <h1>Sidebar</h1>
       {props.posts ? (
         <InfiniteScroll
           dataLength={props.posts.length} //This is important field to render the next data
@@ -34,7 +33,7 @@ const Sidebar = (props) => {
           {buildPostList(props.posts)}
         </InfiniteScroll>
       ) : (
-        "Loading..."
+        <h1>Loading</h1>
       )}
     </div>
   );

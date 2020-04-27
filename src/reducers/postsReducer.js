@@ -3,7 +3,6 @@ const INITIAL_DATA = {
 };
 
 export default (state = INITIAL_DATA, action) => {
-  console.log(action.payload);
   switch (action.type) {
     case "FETCH_POSTS":
       return { ...state, posts: [...state.posts, ...action.payload.posts] };

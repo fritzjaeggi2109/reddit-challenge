@@ -1,24 +1,31 @@
 import React from "react";
+import { formatDate } from "../utils/dateFormat";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+
+import classes from "../css/post.module.css";
 
 const Post = ({ post }) => {
   return (
-    <div className="postCard">
-      <div className="postThumb">
-        <img alt="" src="" />
+    <div className={classes.postCard}>
+      <div className={classes.postThumb}>
+        <img className={classes.thumb} alt="" src={post.thumbnail} />
       </div>
-      <div className="postDetails">
-        <p className="postTitle">{post.title}</p>
-        <p>{post.author}</p>
-        <p>{post.created_utc}</p>
-        <p>{post.num_comments}</p>
+      <div className={classes.postDetails}>
+        <span className={classes.postTitle}>{post.title}</span>
+        <div className={classes.postAuthorDate}>
+          <span className={classes.postAuthor}>{post.author}</span>
+          <span className={classes.postDate}>
+            {formatDate(post.created)} ago
+          </span>
+        </div>
+        <span className={classes.postComment}>{post.comments} comments</span>
       </div>
       <div className="postActions">
         <div>
-          <FontAwesomeIcon icon={faTrashAlt} />
+          <FontAwesomeIcon icon={faCheckCircle} />
         </div>
-        <p className="postReadedStatus"></p>
+        <span className="postReadedStatus"></span>
       </div>
     </div>
   );

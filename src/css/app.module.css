@@ -1,7 +1,9 @@
 .mainContainer {
-  margin-top: 5rem;
+  box-sizing: border-box;
 }
 
 .homeContainer {
+  padding-top: 5rem;
+  box-sizing: border-box;
   display: flex;
 }

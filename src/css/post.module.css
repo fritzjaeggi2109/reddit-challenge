@@ -1,0 +1,62 @@
+.postCard {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(185, 185, 185, 0.2);
+  min-height: 100px;
+}
+
+.postCard:hover {
+  background-color: rgba(185, 185, 185, 0.2);
+  cursor: pointer;
+}
+
+.postThumb {
+  flex: 1;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.thumb {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50rem;
+}
+
+.postDetails {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+.postTitle {
+  font-weight: 800;
+}
+
+.postAuthorDate {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 5px 0 2px 0;
+}
+
+.postAuthor,
+.postDate {
+  font-size: 0.7rem;
+  color: #c6c6c6;
+}
+
+.postAuthor {
+  margin-right: 10px;
+}
+
+.postComment {
+  font-size: 0.8rem;
+  color: #272727;
+}
