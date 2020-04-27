@@ -12,8 +12,7 @@ const Sidebar = (props) => {
 
   const buildPostList = (posts) => {
     return posts.map((post) => {
-      console.log(post);
-      return <Post key={post.data.id} post={post.data} />;
+      return <Post key={post.id} post={post} />;
     });
   };
 

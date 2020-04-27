@@ -9,16 +9,16 @@ const Post = ({ post }) => {
         <img alt="" src="" />
       </div>
       <div className="postDetails">
-        <span className="postTitle">{post.title}</span>
-        <span>{post.author}</span>
-        <span>{post.created_utc}</span>
-        <span>{post.num_comments}</span>
+        <p className="postTitle">{post.title}</p>
+        <p>{post.author}</p>
+        <p>{post.created_utc}</p>
+        <p>{post.num_comments}</p>
       </div>
       <div className="postActions">
         <div>
           <FontAwesomeIcon icon={faTrashAlt} />
         </div>
-        <span className="postReadedStatus"></span>
+        <p className="postReadedStatus"></p>
       </div>
     </div>
   );

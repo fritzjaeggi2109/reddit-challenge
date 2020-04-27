@@ -1,5 +1,7 @@
 import React from "react";
+import { connect } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { fetchPosts } from "../actions";
 
 import classes from "../css/app.module.css";
 import Header from "./Header";
@@ -13,7 +15,9 @@ class App extends React.Component {
     label: "Gallery",
   };
 
-  componentDidMount() {}
+  componentDidMount() {
+    this.props.fetchPosts();
+  }
 
   handleLinkClick = (path, label) => {
     this.setState({
@@ -33,7 +37,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/">
               <div className={classes.homeContainer}>
-                <Sidebar posts={this.state.posts} />
+                <Sidebar posts={this.props.posts} />
                 <Home />
               </div>
             </Route>
@@ -47,4 +51,10 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    posts: state.posts.posts,
+  };
+};
+
+export default connect(mapStateToProps, { fetchPosts })(App);
