@@ -1,0 +1,39 @@
+.header {
+  height: 5rem;
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+.headerLogo {
+  width: 10rem;
+}
+
+.headerLink {
+  text-decoration: none;
+  color: #000000;
+}
+
+.headerLink:hover {
+  color: #757575;
+}
+
+.headerLinkContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerLinkContainer span {
+  margin-right: 5px;
+}
